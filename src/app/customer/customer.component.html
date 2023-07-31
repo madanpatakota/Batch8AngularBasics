@@ -1,0 +1,125 @@
+
+
+
+   <!-- Data Binding -->
+
+
+   <!-- <p>Hello John</p> -->
+
+   <!-- 1. string interpolation -->
+
+   <!-- if you want to bind the data(string) into the html from ts file then you can do by using the string interpolation feature in the angular -->
+
+   <p>{{ name }}</p>
+
+   <p> {{ customerID}}</p>
+
+   <p> {{ getCustomerLocation() }}</p>
+
+
+   <br>
+
+
+   <!-- binding the data with the property called as property databinding   [<property> ]--> 
+
+     <!-- 2 -->
+
+   <input id="textID" type="text" [value]="job">
+
+
+   <input [type]="inputType">
+
+   <input type="checkbox">
+
+
+
+
+   <!-- event or function or method -->
+
+
+      <!-- binding the method with the event called as event databinding   [<property> ]--> 
+
+<!-- 
+event  click , keypress , key up , key down , mouse click
+    mouse over , mouse out , mouse scroll
+        (<event>) -->
+
+
+<button (click) = "evtClick()" > Click</button>
+
+
+
+<!-- 
+can i implemnet property databinding and event databinding 
+to the single element   ??-->
+<!-- yes you can do      -->
+
+<input type="text"
+       (keyup)="evtKeyUp($event)"
+       [value] = "officeName"
+       >
+  
+
+
+<!-- style and class  in the css -- refresh -->
+<!-- 
+if and else
+
+switch -->
+
+
+
+
+<hr>
+
+
+
+<!--Handling by Angular Directive-->
+<!-- 
+In Angular, Directives are defined as classes that can add new behavior to the elements in the template or modify existing behavior -->
+<input 
+id="streetnameId1" 
+type="text" 
+[ngModel]="streetname_1">
+
+
+<hr>
+
+<!-- ngModelChange will triggers when you change the ngmodel  -->
+
+<input 
+id="streename2ID" 
+type="text" 
+[ngModel]="streetname_2"
+(ngModelChange)="getStreetNameDetails($event)">
+
+
+<hr>
+
+
+
+<!-- Local refeence variable # symbol-->
+
+<input id="empFullNameID" type="text" #refEmpFullName>
+
+<button
+ (click)="geFullNameDetail(refEmpFullName)"> Click</button>
+
+
+
+
+
+ <!-- property databinding + event databinding -->
+
+ <!-- {{}}   , [] , () , # , [()] -->
+
+ <!-- ngModel -->
+
+
+ <hr>
+
+<input type="text" 
+[(ngModel)] =  "schoolName" />
+
+
+<p>{{schoolName}}</p>

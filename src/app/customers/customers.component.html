@@ -1,0 +1,29 @@
+
+<!-- property databinding [] -->
+
+
+
+<p style="background-color:red">
+  Customers</p>
+
+
+
+<!-- ngStyle -->
+
+<!-- 
+i am changing the paragraph element 
+behaviour with the hlep of the ngStyle
+directive -->
+<p [ngStyle]="{backgroundColor:blueColor}">
+ blue color -  Customers</p>
+
+
+
+ <!-- 
+i am changing the paragraph element 
+behaviour with the hlep of the ngClass
+directive -->
+ <p 
+   [ngClass]="{online : status == 'online'}">
+   Customers are in {{status}} 
+</p>
