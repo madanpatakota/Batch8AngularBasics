@@ -1,167 +1,132 @@
 
+<!-- <div class="container" style="margin:30px;padding:50px;background-color: lightyellow;">
+  <h3>Cusomers Registration page.(Customer component)</h3>
+  <form>
+      <div class="form-group" style="margin:10px">
+       <input class="form-control col-md-7"  placeholder="UserName" type="text" />
+      </div>
+      <div class="form-group" style="margin:10px">
+        <input class="form-control col-md-7" placeholder="Password" type="text" />
+       </div>
+       <div class="form-group" style="margin:10px">
+        <input class="form-control col-md-7" placeholder="Location" type="text" />
+       </div>
+  </form>
+</div> -->
 
 
-   <!-- Data Binding -->
+<!-- ngStyle -->
 
-
-   <!-- <p>Hello John</p> -->
-
-   <!-- 1. string interpolation -->
-
-   <!-- if you want to bind the data(string) into the html from ts file then you can do by using the string interpolation feature in the angular -->
-
-   <p>{{ name }}</p>
-
-   <p> {{ customerID}}</p>
-
-   <p> {{ getCustomerLocation() }}</p>
-
-
-   <br>
-
-
-   <!-- binding the data with the property called as property databinding   [<property> ]--> 
-
-     <!-- 2 -->
-
-   <input id="textID" type="text" [value]="job">
-
-
-   <input [type]="inputType">
-
-   <input type="checkbox">
-
-
-
-
-   <!-- event or function or method -->
-
-
-      <!-- binding the method with the event called as event databinding   [<property> ]--> 
+<p style="background-color:yellow">Hello world</p>
 
 <!-- 
-event  click , keypress , key up , key down , mouse click
-    mouse over , mouse out , mouse scroll
-        (<event>) -->
+Q) What is directive
+  1. Directive is a nothing but combination of instructions in the DOM.
+  2. Directive is a function that executes whenever the angular compiler finds in the DOM 
 
 
-<button (click) = "evtClick()" > Click</button>
+
+  By using the directive we can change the structure of the element or behaviour of the element 
+  based on the condition
+
+  ngStyle and ngClass     -- Behaviour
+
+  ngIf , ngFor , ngSwitch -- DOM 
+
+
+-->
+
+
+
+<p  style="background-color:yellow">Hello world</p>
+<!-- Apply the style based on the condition . Its the attribute directive -->
+<p [ngStyle] = "{'backgroundColor' : applyYellowColor == true ? 'yellow' : 'red' }">Hello paragraph</p>
+<!-- 
+<p style="visibility: hidden;">Hey i am  in hidden</p>
+<p style="visibility: visible;">Hey i am visiable</p> -->
+
+
+<p [ngStyle] = "{'visibility' : isVisiable == true ? 'visible' : 'hidden' }">
+  Hey i am visiable by ngStyle direcive</p>
+
+
+<p *ngIf = "isIfConditionTrue else help">
+  Hey i am visiable by ngIf direcive
+</p>
+
+
+<!-- ngTemplate : ngTemplate is a template which can renders based on condition in DOM. If condition is true then it can renders in the DOM or it cannot-->
+
+ <!-- Means can't render or executs or process until call is not defined-->
+<ng-template #help>
+<p>Hey isIfConditionTrue is false due to that iam loading....</p>
+</ng-template>
+
+
 
 
 
 <!-- 
-can i implemnet property databinding and event databinding 
-to the single element   ??-->
-<!-- yes you can do      -->
+<p class="content">I am the content</p>
+<p class="nocontent">I am No the content</p> -->
 
-<input type="text"
-       (keyup)="evtKeyUp($event)"
-       [value] = "officeName"
-       >
-  
-
-
-<!-- style and class  in the css -- refresh -->
-<!-- 
-if and else
-
-switch -->
-
-
-
-
-<hr>
-
-
-
-<!--Handling by Angular Directive-->
-<!-- 
-In Angular, Directives are defined as classes that can add new behavior to the elements in the template or modify existing behavior -->
-<input 
-id="streetnameId1" 
-type="text" 
-[ngModel]="streetname_1">
-
-
-<hr>
-
-<!-- ngModelChange will triggers when you change the ngmodel  -->
-
-<input 
-id="streename2ID" 
-type="text" 
-[ngModel]="streetname_2"
-(ngModelChange)="getStreetNameDetails($event)">
-
-
-<hr>
-
-
-
-<!-- Local refeence variable # symbol-->
-
-<input id="empFullNameID" type="text" #refEmpFullName>
-
-<button
- (click)="geFullNameDetail(refEmpFullName)"> Click</button>
+<!-- Apply the class based on the condition . . Its the attribute directive   -->
+<p [ngClass]="isContent == true ? 'content' : 'noncontent'"> Hello </p>
 
 
 
 
 
- <!-- property databinding + event databinding -->
 
- <!-- {{}}   , [] , () , # , [()] -->
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>  
+  <li>Four</li>  
+  <li>Five</li>  
+  <li>six</li> 
+  <li>seven</li> 
+  <li>eight</li> 
+  <li>nine</li> 
+  <li>ten</li> 
+</ul>
 
- <!-- ngModel -->
+<!-- *ngFor 
+  (we can print the list of the values) -->
 
+  <!-- <*ngFor = "let ___ of _____"> -->
 
- <hr>
-
-<input type="text" 
-[(ngModel)] =  "schoolName" />
-
-
-<p>{{schoolName}}</p>
-
-
-
-<div style="margin:20px">
-<form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
-
-
-
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Select City
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Bangolore</a></li>
-    <li><a class="dropdown-item" href="#">Hyderabad</a></li>
-    <li><a class="dropdown-item" href="#">Chennai</a></li>
+  <hr>
+  <ul>
+    <li *ngFor="let number of numbers"> {{number}}</li>
   </ul>
-</div>
 
 
-<select>
-     <option>Bangolore</option>
-     <option>Bangolore</option>
-     <option>Bangolore</option>
-</select>
+
+<!-- <ng-template>
+    <p>Hello world</p>
+</ng-template> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

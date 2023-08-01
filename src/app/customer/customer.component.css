@@ -1,4 +1,22 @@
-p { color:red }
+/* p { color:red } */
 
 
-h1 { background-color : orange ;  font-family: 'Times New Roman', Times, serif;}
+/* h1 { background-color : orange ;  font-family: 'Times New Roman', Times, serif;} */
+
+
+
+/* Here content is class name under customer.component.css file  */
+
+.content{
+      font-size: 30px;
+      background-color:yellow;
+      color:red;
+      font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Here no content is class name under customer.component.css file  */
+
+.nocontent{
+  font-size: 20px;
+}

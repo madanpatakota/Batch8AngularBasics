@@ -117,9 +117,37 @@ export class CustomerComponent{
 
 
 
+       applyYellowColor = true; 
 
 
+       isVisiable = false;
 
+
+       isContent = false;
+
+
+       isIfConditionTrue = false;
+
+
+      //  if(true){
+
+      //  }
+      //  else{
+
+      //  }
+
+
+/*
+   prepare the array 
+   Array -> List of the items
+
+   Array -> Prepare the list items what do you want.
+
+*/
+
+
+    numbers = ["one" , "two" , "three" , "Four" , "Five",
+               "Six" , "Seven" , "Eight" , "Nine"]
 
 
 
