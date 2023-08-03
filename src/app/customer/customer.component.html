@@ -1,111 +1,22 @@
 
-<!-- <div class="container" style="margin:30px;padding:50px;background-color: lightyellow;">
-  <h3>Cusomers Registration page.(Customer component)</h3>
+<div class="container" style="margin:30px;padding:50px;background-color: lightyellow;">
+  <h3>Cusomer Registration page.(Customer component)</h3>
   <form>
       <div class="form-group" style="margin:10px">
-       <input class="form-control col-md-7"  placeholder="UserName" type="text" />
+       <input class="form-control col-md-7"  placeholder="Customer Name" type="text" #txtCustomerName />
       </div>
       <div class="form-group" style="margin:10px">
-        <input class="form-control col-md-7" placeholder="Password" type="text" />
+        <input class="form-control col-md-7" placeholder="Password" type="text" #txPassword />
        </div>
        <div class="form-group" style="margin:10px">
-        <input class="form-control col-md-7" placeholder="Location" type="text" />
+        <input class="form-control col-md-7" placeholder="Location" type="text" #txtLocation />
        </div>
   </form>
-</div> -->
+  <div class="form-group">
+    <button class="btn btn-primary" (click) = "evtClick()" >Click</button>
+  </div>
+</div>
 
-
-<!-- ngStyle -->
-
-<p style="background-color:yellow">Hello world</p>
-
-<!-- 
-Q) What is directive
-  1. Directive is a nothing but combination of instructions in the DOM.
-  2. Directive is a function that executes whenever the angular compiler finds in the DOM 
-
-
-
-  By using the directive we can change the structure of the element or behaviour of the element 
-  based on the condition
-
-  ngStyle and ngClass     -- Behaviour
-
-  ngIf , ngFor , ngSwitch -- DOM 
-
-
--->
-
-
-
-<p  style="background-color:yellow">Hello world</p>
-<!-- Apply the style based on the condition . Its the attribute directive -->
-<p [ngStyle] = "{'backgroundColor' : applyYellowColor == true ? 'yellow' : 'red' }">Hello paragraph</p>
-<!-- 
-<p style="visibility: hidden;">Hey i am  in hidden</p>
-<p style="visibility: visible;">Hey i am visiable</p> -->
-
-
-<p [ngStyle] = "{'visibility' : isVisiable == true ? 'visible' : 'hidden' }">
-  Hey i am visiable by ngStyle direcive</p>
-
-
-<p *ngIf = "isIfConditionTrue else help">
-  Hey i am visiable by ngIf direcive
-</p>
-
-
-<!-- ngTemplate : ngTemplate is a template which can renders based on condition in DOM. If condition is true then it can renders in the DOM or it cannot-->
-
- <!-- Means can't render or executs or process until call is not defined-->
-<ng-template #help>
-<p>Hey isIfConditionTrue is false due to that iam loading....</p>
-</ng-template>
-
-
-
-
-
-<!-- 
-<p class="content">I am the content</p>
-<p class="nocontent">I am No the content</p> -->
-
-<!-- Apply the class based on the condition . . Its the attribute directive   -->
-<p [ngClass]="isContent == true ? 'content' : 'noncontent'"> Hello </p>
-
-
-
-
-
-
-<ul>
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>  
-  <li>Four</li>  
-  <li>Five</li>  
-  <li>six</li> 
-  <li>seven</li> 
-  <li>eight</li> 
-  <li>nine</li> 
-  <li>ten</li> 
-</ul>
-
-<!-- *ngFor 
-  (we can print the list of the values) -->
-
-  <!-- <*ngFor = "let ___ of _____"> -->
-
-  <hr>
-  <ul>
-    <li *ngFor="let number of numbers"> {{number}}</li>
-  </ul>
-
-
-
-<!-- <ng-template>
-    <p>Hello world</p>
-</ng-template> -->
 
 
 

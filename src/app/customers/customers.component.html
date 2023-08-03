@@ -1,29 +1,32 @@
 
-<!-- property databinding [] -->
+<div
+  class="container"
+  style="margin: 30px; padding: 50px; background-color: lightgreen"
+>
+<h3>Cusomers Details page.(Customers details component)</h3>
 
-
-
-<p style="background-color:red">
-  Customers</p>
-
-
-
-<!-- ngStyle -->
+</div>
 
 <!-- 
-i am changing the paragraph element 
-behaviour with the hlep of the ngStyle
-directive -->
-<p [ngStyle]="{backgroundColor:blueColor}">
- blue color -  Customers</p>
-
-
-
- <!-- 
-i am changing the paragraph element 
-behaviour with the hlep of the ngClass
-directive -->
- <p 
-   [ngClass]="{online : status == 'online'}">
-   Customers are in {{status}} 
-</p>
+<div
+  class="container"
+  style="margin: 30px; padding: 50px; background-color: lightgreen"
+>
+  <div style="padding: 5px; margin: 10px">
+    <h3>Cusomers Details page.(Customers details component)</h3>
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of customerInfo">
+          <div class="row">
+            <div class="col-4">
+              {{ item.name }} {{ item.password }} {{ item.location }}  {{item.emailID}}
+            </div>
+            <div class="col-1">
+              <button class="btn btn-success">Edit</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->

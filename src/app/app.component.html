@@ -1,11 +1,14 @@
 
 <div style="margin:10px ;  padding:100px ; background-color:lightsalmon;">
-<app-customer></app-customer>
+  <h1>App Component</h1> 
 
-<!-- appcustomer componenent is the child component in the appcomponent -->
 
-<!-- 
-<app-customers></app-customers> -->
 
+  <!-- recalling one point is here i.e. property databinding -->
+
+  <!-- i.e. @input decarator-->
+  
+  <app-customer  [txtWorld]  = "sampletext"   ></app-customer>
+  <app-customers></app-customers>
 </div>
 

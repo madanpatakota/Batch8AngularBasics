@@ -8,12 +8,7 @@ import { Component } from '@angular/core';
 export class CustomersComponent {
 
 
-  blueColor:string = "blue";
-
-
-   status = "online"
-
-
+  customerInfo : any;
 
 
 }
