@@ -1,5 +1,10 @@
 
-import { Component, ElementRef, ViewChild , Input } from '@angular/core';
+import { Component, 
+  ElementRef,
+   ViewChild , 
+   Input , 
+   Output ,
+   EventEmitter } from '@angular/core';
 @Component({
   selector :'app-customer',
   templateUrl : './customer.component.html',
@@ -23,7 +28,14 @@ export class CustomerComponent{
 
 
   @Input() txtWorld : any; 
+  @Input() CustomerSampleDetails: any = {};
 
+// export the data to the parent component 
+  
+  @Output() evtCustomerEmitter = new EventEmitter<any>();
+   // EventEmitter is a kind of the method which accepts the any kind of the data and inject that data to the  parent  component 
+
+   // Emit or Inject 
 
    evtClick(){
    //   txtCustomerName i want to pick the value from this textbox
@@ -42,6 +54,9 @@ export class CustomerComponent{
        }
 
         console.log(customerInfo);
+        // @Output() evtCustomerEmitter = new EventEmitter<any>();
+        this.evtCustomerEmitter.emit(customerInfo);
+        // Here i want to export the customerinfo to the customerscomponet
        //console.log("Clicked");
 
    }

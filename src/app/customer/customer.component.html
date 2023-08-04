@@ -3,13 +3,14 @@
   <h3>Cusomer Registration page.(Customer component)</h3>
   <form>
       <div class="form-group" style="margin:10px">
-       <input class="form-control col-md-7"  placeholder="Customer Name" type="text" #txtCustomerName />
+       <input class="form-control col-md-7"  placeholder="Customer Name" type="text"
+        [value]="CustomerSampleDetails.name" #txtCustomerName />
       </div>
       <div class="form-group" style="margin:10px">
-        <input class="form-control col-md-7" placeholder="Password" type="text" #txPassword />
+        <input class="form-control col-md-7" placeholder="Password" type="text" [value]="CustomerSampleDetails.password"  #txPassword />
        </div>
        <div class="form-group" style="margin:10px">
-        <input class="form-control col-md-7" placeholder="Location" type="text" #txtLocation />
+        <input class="form-control col-md-7" placeholder="Location" type="text" [value]="CustomerSampleDetails.location" #txtLocation />
        </div>
   </form>
   <div class="form-group">

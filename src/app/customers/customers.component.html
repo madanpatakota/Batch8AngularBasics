@@ -1,13 +1,3 @@
-
-<div
-  class="container"
-  style="margin: 30px; padding: 50px; background-color: lightgreen"
->
-<h3>Cusomers Details page.(Customers details component)</h3>
-
-</div>
-
-<!-- 
 <div
   class="container"
   style="margin: 30px; padding: 50px; background-color: lightgreen"
@@ -16,17 +6,19 @@
     <h3>Cusomers Details page.(Customers details component)</h3>
     <div>
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let item of customerInfo">
+        <li class="list-group-item">
           <div class="row">
             <div class="col-4">
-              {{ item.name }} {{ item.password }} {{ item.location }}  {{item.emailID}}
-            </div>
-            <div class="col-1">
-              <button class="btn btn-success">Edit</button>
+               {{CustomerInputInfo.name}} 
+               {{CustomerInputInfo.password}} 
+               {{CustomerInputInfo.location}}
             </div>
           </div>
         </li>
       </ul>
     </div>
+    <div class="col-2">
+      <button class="btn btn-success" (click)="submitDta()">Sample Data</button>
+    </div>
   </div>
-</div> -->
+</div>

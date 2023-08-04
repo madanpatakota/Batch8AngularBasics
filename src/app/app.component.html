@@ -2,13 +2,34 @@
 <div style="margin:10px ;  padding:100px ; background-color:lightsalmon;">
   <h1>App Component</h1> 
 
-
+  <!-- {name: 'Madan', password: 'madfas', location: 'adfasdas'} -->
+  {{customerDetails.name}}
+  {{customerDetails.password}}
+  {{customerDetails.location}}
 
   <!-- recalling one point is here i.e. property databinding -->
 
   <!-- i.e. @input decarator-->
   
-  <app-customer  [txtWorld]  = "sampletext"   ></app-customer>
-  <app-customers></app-customers>
+<app-customer  
+   [txtWorld]              = "sampletext" 
+   (evtCustomerEmitter)    = "getCustomerDetails($event)"
+   [CustomerSampleDetails] = "customerSampleData"
+  >
+</app-customer>
+
+
+<!-- 
+<input type = "text"
+ [value] = "name"
+ (keypress) = "onkeypress"/> -->
+
+
+
+
+  <app-customer-details 
+  [CustomerInputInfo] ="customerDetails"
+  (SampleDataEmitter) = "takeSampleDataFunc($event)">
+  </app-customer-details>
 </div>
 
