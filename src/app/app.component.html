@@ -3,9 +3,9 @@
   <h1>App Component</h1> 
 
   <!-- {name: 'Madan', password: 'madfas', location: 'adfasdas'} -->
-  {{customerDetails.name}}
-  {{customerDetails.password}}
-  {{customerDetails.location}}
+  customerDetails.name -  {{customerDetails.name}}
+  customerDetails.password - {{customerDetails.password}}
+  customerDetails.location - {{customerDetails.location}}
 
   <!-- recalling one point is here i.e. property databinding -->
 
@@ -16,8 +16,18 @@
    (evtCustomerEmitter)    = "getCustomerDetails($event)"
    [CustomerSampleDetails] = "customerSampleData"
   >
-</app-customer>
+  <!--I want to prepare the some content-->
+  <!-- <input class="form-control col-md-7" placeholder="Location" type="text" [value]="CustomerSampleDetails.location" #txtLocation /> -->
+  <input class="form-control col-md-7" placeholder="Message1" type="text"/> 
 
+  <input class="form-control col-md-7 CusomerMessage" placeholder="CusomerMessage" type="text" #CustomerMessage/> 
+
+
+  </app-customer>
+
+<!-- <div>
+     <p> i am paragraph</p>
+  </div> -->
 
 <!-- 
 <input type = "text"

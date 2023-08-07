@@ -9,25 +9,15 @@ export class AppComponent {
   
 
       sampletext = "Hello world";
-
       customerDetails : any = {};
-
-
       // customer
 
       // Now appcompnent has triggerd {name: 'Madan', password: 'madfas', location: 'adfasdas'}
       getCustomerDetails($event : any){
            console.log("Now appcompnent has triggerd" ,$event);
-
-          
            this.customerDetails = $event;
-          
-           
-
            //{name: 'Madan', password: 'madfas', location: 'adfasdas'}
       }
-
-
 
       customerSampleData : any = {};
       

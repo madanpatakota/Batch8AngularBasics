@@ -12,6 +12,15 @@
        <div class="form-group" style="margin:10px">
         <input class="form-control col-md-7" placeholder="Location" type="text" [value]="CustomerSampleDetails.location" #txtLocation />
        </div>
+
+
+       <!--Ngcontent-->
+        <div class="form-group" style="margin:10px">
+         <ng-content select = ".CusomerMessage"></ng-content>
+        </div>
+
+
+
   </form>
   <div class="form-group">
     <button class="btn btn-primary" (click) = "evtClick()" >Click</button>
